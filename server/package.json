@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "learning ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mrahman019/day8Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrahman019/day8Backend/issues"
+  },
+  "homepage": "https://github.com/mrahman019/day8Backend#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
