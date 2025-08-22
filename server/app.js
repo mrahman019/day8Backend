@@ -15,24 +15,52 @@ app.get("/Global", (req, res) => {
 app.post("/register", (req, res) => {
     let userData = req.body
     console.log(userData)
-   // res.json(userData)
+    // res.json(userData)
 
     //or
- res.json({msg:"user register successfully"})
+    res.json({ msg: "user register successfully" })
 })
 app.post("/students/:id", (req, res) => {
     let id = req.params.id;
     console.log(id)
-   res.json(id)
+    res.json(id)
 
-    //or
+
+});
+//or
 // res.json({msg:"user register successfully"})
+app.get("/link", (req, res) => {
+    try {
+        res.redirect("https://google.com")
+    } catch (error) {
+        console.log(error)
+    }
 })
+
+app.get("/url/:link",(req,res)=>{
+    try {
+        let url = req.params.link;
+        res.redirect(`https://${url}.com`);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.get("/download",(req,res)=>{
+    try {
+        res.download("./download.jpg")
+    } catch (error) {
+        console.log(error)
+        
+    }
+})
+
+
 
 //IN SIMPLE APP HAS 2 PRAMS 
 //METHOD ==> HTTP METHOD GET,POST,PUT,DELETE 
 
 
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
     console.log("Server is running");
 })
