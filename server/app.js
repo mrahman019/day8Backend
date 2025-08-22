@@ -21,7 +21,7 @@ app.post("/register", (req, res) => {
  res.json({msg:"user register successfully"})
 })
 app.post("/students/:id", (req, res) => {
-    let userData = req.params.id;
+    let id = req.params.id;
     console.log(id)
    res.json(id)
 
